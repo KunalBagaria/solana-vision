@@ -1,0 +1,55 @@
+:root {
+  --gray-11: hsla(0, 0%, 0%, 1);
+  --inverse-text-color: white;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 62.5%;
+  @media only screen and (max-width: 1280px) {
+    font-size: 55%;
+  }
+  @media only screen and (max-width: 768px) {
+    font-size: 50%;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  background: url('../images/backgrounds/gradient.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.connect-wallet {
+  border: none;
+  max-width: 36.7rem;
+  width: 100%;
+  height: 6.4rem;
+  background: var(--gray-11);
+  border-radius: 1.2rem;
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--inverse-text-color);
+  transition: 0.3s all linear;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.85;
+  }
+}

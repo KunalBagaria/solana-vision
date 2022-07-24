@@ -9,12 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/outfit": "^4.5.8",
+    "@solana-mobile/wallet-adapter-mobile": "^0.0.1-alpha.7",
+    "@solana/wallet-adapter-base": "^0.9.9",
+    "@solana/wallet-adapter-react": "^0.15.8",
+    "@solana/wallet-adapter-react-ui": "^0.9.10",
+    "@solana/wallet-adapter-wallets": "^0.16.8",
+    "@solana/web3.js": "^1.50.0",
     "next": "12.2.3",
+    "nprogress": "^0.2.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "sass": "^1.54.0",
+    "typeface-libre-baskerville": "^1.1.13"
   },
   "devDependencies": {
     "@types/node": "18.0.6",
+    "@types/nprogress": "^0.2.0",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
     "eslint": "8.20.0",

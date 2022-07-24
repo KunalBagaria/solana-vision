@@ -1,0 +1,40 @@
+.main {
+  margin-top: 10rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.headingOne {
+  margin: 0;
+  margin-top: 6.5rem;
+  font-size: 8rem;
+  font-weight: 600;
+}
+
+.headingTwo {
+  font-family: 'Libre Baskerville';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 5.6rem;
+  line-height: 8.8rem;
+  letter-spacing: -0.183543rem;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.globe {
+  position: fixed;
+  bottom: 0;
+  max-width: 100%;
+  z-index: -1;
+}
