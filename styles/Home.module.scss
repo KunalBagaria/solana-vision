@@ -1,5 +1,4 @@
 .main {
-  margin-top: 10rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -9,10 +8,17 @@
   text-align: center;
 }
 
+.logo {
+  margin-top: 10rem;
+  @media only screen and (max-width: 1440px) {
+    margin-top: 6rem;
+  }
+}
+
 .headingOne {
   margin: 0;
-  margin-top: 6.5rem;
-  font-size: 8rem;
+  margin-top: 2.875rem;
+  font-size: 5rem;
   font-weight: 600;
 }
 
@@ -20,21 +26,24 @@
   font-family: 'Libre Baskerville';
   font-style: italic;
   font-weight: 400;
-  font-size: 5.6rem;
-  line-height: 8.8rem;
-  letter-spacing: -0.183543rem;
+  font-size: 3.5rem;
+  line-height: 5.5rem;
+  letter-spacing: -0.083543rem;
 }
 
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 4rem;
 }
 
 .globe {
   position: fixed;
   bottom: 0;
-  max-width: 100%;
-  z-index: -1;
+  max-width: 60%;
+  pointer-events: none;
+  @media only screen and (max-width: 1640px) {
+    max-width: 40%;
+  }
 }

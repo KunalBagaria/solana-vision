@@ -11,29 +11,35 @@ import globe from '@/images/backgrounds/globe.png';
 // Component Imports
 import { ConnectWallet } from '@/layouts/Wallet';
 import { useWallet } from '@solana/wallet-adapter-react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 const Home: NextPage = () => {
   const { publicKey } = useWallet();
   const { push } = useRouter();
 
+  const [clicked, setClicked] = useState(false);
   useEffect(() => {
-    if (publicKey) push('/tools')
-  }, [])
+    if (clicked && publicKey) push('/dashboard')
+  }, [clicked, publicKey])
 
   return (
     <div className={styles.main}>
       <DefaultHead />
-      <img src={logo.src} alt="Solana Vision" />
+      <img className={styles.logo} src={logo.src} alt="Solana Vision" />
       <h1 className={styles.headingOne}>Place for small micro tools</h1>
       <h1 className={styles.headingTwo}>By Community. On Solana.</h1>
       <ConnectWallet>
-        <button className="connect-wallet">Connect Wallet</button>
+        <button
+          onClick={() => setClicked(true)}
+          className="connect-wallet mt-1"
+        >
+          Connect Wallet
+        </button>
       </ConnectWallet>
       <img className={styles.globe} src={globe.src} alt="" />
     </div>
-  )
+  );
 }
 
 export default Home

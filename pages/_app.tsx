@@ -8,6 +8,7 @@ import '@fontsource/outfit';
 import 'typeface-libre-baskerville';
 
 import { Wallet } from '@/layouts/Wallet';
+import { NextUIProvider } from '@nextui-org/react';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
@@ -16,7 +17,9 @@ Router.events.on('routeChangeError', () => NProgress.done());
 function SolanaVision({ Component, pageProps }: any) {
   return (
     <Wallet>
-      <Component {...pageProps} />
+      <NextUIProvider>
+        <Component {...pageProps} />
+      </NextUIProvider>
     </Wallet>
   );
 }
