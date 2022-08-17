@@ -5,18 +5,23 @@ import { DefaultHead } from '@/layouts/DefaultHead';
 import styles from '@/styles/Dashboard.module.scss';
 
 // Component Imports
-import { useWallet } from '@solana/wallet-adapter-react';
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
 import { Navbar } from '@/layouts/Navbar';
+import { AddAppBox, AppBox } from '@/layouts/AppBox';
+import { apps } from '@/components/apps';
 
 const Dashboard: NextPage = () => {
-  const { push } = useRouter();
-  const { publicKey } = useWallet();
   return (
     <div>
       <DefaultHead />
       <Navbar pageName="Dashboard" />
+      <div className={styles.container}>
+        <div className={styles.appGrid}>
+          {apps.map((app, index) => (
+            <AppBox key={index} {...app} />
+          ))}
+          <AddAppBox />
+        </div>
+      </div>
     </div>
   );
 }
