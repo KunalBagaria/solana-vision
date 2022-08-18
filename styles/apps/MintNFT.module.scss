@@ -15,15 +15,20 @@
   background: #FFFFFF;
   box-shadow: 0.25rem 0.25rem 1.5rem rgba(0, 0, 0, 0.05);
   border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .heading {
   margin-top: 1.25rem;
   font-size: 2rem;
+  margin-bottom: 0rem;
 }
 
 .description {
   margin-top: 0.25rem;
+  margin-bottom: 0rem;
   font-size: 1rem;
   color: #535362;
   font-weight: 500;
@@ -59,4 +64,9 @@
 .textarea {
   height: 6rem;
   resize: none;
+}
+
+.inputImage {
+  max-height: 8.1875rem;
+  object-fit: fill;
 }

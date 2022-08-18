@@ -1,0 +1,1 @@
+export const BUNDLR_MAINNET_ENDPOINT = 'https://node1.bundlr.network';

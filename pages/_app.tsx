@@ -9,6 +9,7 @@ import 'typeface-libre-baskerville';
 
 import { Wallet } from '@/layouts/Wallet';
 import { NextUIProvider } from '@nextui-org/react';
+import { Toaster } from 'react-hot-toast';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
@@ -20,6 +21,7 @@ function SolanaVision({ Component, pageProps }: any) {
       <NextUIProvider>
         <Component {...pageProps} />
       </NextUIProvider>
+      <Toaster />
     </Wallet>
   );
 }
