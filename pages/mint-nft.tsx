@@ -14,6 +14,17 @@ const MintNFT: NextPage = () => {
         <div className={styles.box}>
           <h1 className={styles.heading}>Mint NFT</h1>
           <p className={styles.description}>A simple 2-click Image to NFT generator</p>
+
+          <div className="mt-1-5">
+            <p className={styles.inputLabel}>Enter Name of the NFT</p>
+            <input className={styles.input} placeholder="Eg. My first NFT" />
+            <p className={styles.inputLabel}>Enter Description about NFT</p>
+            <textarea
+              className={`${styles.input} ${styles.textarea}`}
+              placeholder="Eg. This image is of the first computer that I got from my father at age of 10"
+            />
+          </div>
+
         </div>
 
       </div>
