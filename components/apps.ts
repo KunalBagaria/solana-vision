@@ -20,4 +20,5 @@ const apps = [
   },
 ]
 
-export { apps, AppInterface }
+export { apps }
+export type { AppInterface };
