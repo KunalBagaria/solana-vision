@@ -3,7 +3,11 @@ import styles from '@/styles/apps/MintNFT.module.scss';
 
 import uploadImage from '@/images/elements/upload-image.svg';
 
-import { useState, useRef } from 'react';
+import {
+  useState,
+  useRef,
+  useEffect
+} from 'react';
 
 import { NextPage } from 'next';
 import { Navbar } from '@/layouts/Navbar';
@@ -20,7 +24,6 @@ const MintNFT: NextPage = () => {
   const [image, setImage] = useState('');
 
   const handleMint = async () => {
-    toast.loading('Minting NFT...');
     if (!wallet || !name || !description || !image) {
       toast.error('Please fill out all fields');
       return;
@@ -34,9 +37,26 @@ const MintNFT: NextPage = () => {
       toast.error('Failed to upload NFT metadata');
       return;
     }
-    const tx = await mintNFT(wallet, metadataURI);
-    if (tx) {
-      window.open(tx.txId, '_blank');
+    const tx = mintNFT(wallet, metadataURI);
+    toast.promise(tx, {
+      loading: "Minting NFT",
+      error: "Failed to mint NFT",
+      success: "Successfully minted NFT"
+    });
+    const txid = await tx;
+    console.log(txid);
+    if (txid) {
+      toast(() => (
+        <span>
+          Transaction Status
+          <button
+            onClick={() => window.open('https://explorer.solana.com/tx/' + txid, '_blank')}
+            className={styles.toastButton}
+          >
+            View on Explorer
+          </button>
+        </span>
+      ));
     }
   }
 

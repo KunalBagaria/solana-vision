@@ -70,3 +70,15 @@
   max-height: 8.1875rem;
   object-fit: fill;
 }
+
+.toastButton {
+  margin-left: 0.8rem;
+  background: none;
+  border: 0.05rem solid black;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: 0.3s all linear;
+  &:hover {
+    background: #F2F3F7;
+  }
+}
