@@ -1,5 +1,5 @@
 import toast from 'react-hot-toast';
-import styles from '@/styles/apps/MintNFT.module.scss';
+import styles from '@/styles/apps/Index.module.scss';
 
 import uploadImage from '@/images/elements/upload-image.svg';
 

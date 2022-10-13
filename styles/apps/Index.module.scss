@@ -20,6 +20,19 @@
   justify-content: space-between;
 }
 
+.uploadBox {
+  padding: 1.5rem;
+  margin: 8.42rem 0rem;
+  width: 40.375rem;
+  height: 21rem;
+  background: #FFFFFF;
+  box-shadow: 0.25rem 0.25rem 1.5rem rgba(0, 0, 0, 0.05);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .heading {
   margin-top: 1.25rem;
   font-size: 2rem;
@@ -81,4 +94,8 @@
   &:hover {
     background: #F2F3F7;
   }
+}
+
+.imageLink {
+  margin-top: 2rem;
 }
