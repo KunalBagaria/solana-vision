@@ -1,5 +1,6 @@
 import mintNFT from '@/images/apps/mint-nft.png';
 import uploadImage from '@/images/apps/upload.png';
+import solanaImage from '@/images/apps/solana.png';
 
 interface AppInterface {
   name: string;
@@ -26,6 +27,14 @@ const apps = [
     link: "/upload-image",
     gradient: "linear-gradient(109.2deg, #62F7EE -3.96%, #6271F7 100.3%)",
     image: uploadImage.src
+  },
+  {
+    name: "Resolve SOL Domain",
+    description: "Find out the owner of a .SOL Domain",
+    button: "Resolve a domain",
+    link: "/sol-domain-owner",
+    gradient: "linear-gradient(109.2deg, #F762F1 -3.96%, #7762F7 100.3%)",
+    image: solanaImage.src
   }
 ]
 
